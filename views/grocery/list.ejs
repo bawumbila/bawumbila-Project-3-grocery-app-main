@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ 
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+  <h1>Grocery List show page</h1>
+
+  <div>
+    <div class="showbodylist">
+      <div>
+       
+        <div class="showname"><a href="/:<%= groceryList._id %>"></a><%= groceryList.name %></a></div>
+        <!-- Total Price: <%= groceryList.totalPrice %> -->
+      </div>
+      <br>
+      
+
+      <form action="<%= groceryList._id %>/grocery" method="post" id="add-grocery-to-list">
+
+        <select name="groceryId">
+          <% groceries.forEach(function(p) { %>
+            <option value="<%= p._id %>"><%= p.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Add to List</button>
+     </form>
+      
+     <div class="backgroundcolor">  Groceries in This List:</div>
+     
+     <div class="listbkgrnd">
+     <ul>
+       <% records.forEach(function(p) { %>
+        <div class="listelement">
+          
+          <div>
+          <form action="/removegrocery/<%= groceryList._id %>/<%= p._id %>?_method=DELETE"
+          class="delete-form" method="POST">
+          <li class="list"><%= p.name %>: $<%= p.price %></li>
+          <button type="submit">X</button>
+        </form>
+      </div>
+        <div><a href="/<%= p._id %>/edit">Edit</a></div>
+        done: <input type="checkbox" name="Done" /><br />
+    </div>
+       <% }); %>
+     </ul>
+     </div>
+    </div>
+  
+</body>
+
+</html>

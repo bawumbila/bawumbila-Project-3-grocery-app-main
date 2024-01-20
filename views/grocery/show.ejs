@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500&family=Delius&display=swap" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+  
+  <h1>Grocery List show page</h1>
+
+  <div class="listbody">
+    <% groceryList.forEach(function(m, idx) { %>
+      <div>
+       
+        <div class="listwhole">
+        <div class="listname"><a href="/lists/<%= m._id %>"><%= m.name %></a></div>
+
+        <div class="listedit">
+          <a href="/<%= m._id %>/grocerylistedit">Edit</a>
+        </div>
+        <div class="listdelete">
+          <form action="/groceries/<%= m._id %>?_method=DELETE"
+            class="delete-form" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+
+        </div>
+        </div>
+      </div> 
+    <br>
+      <% }); %> 
+    </div>
+  
+    <div class="showButton">
+      
+       
+        <h4><a href="/new">New Grocery List Title</a></h4>
+        
+    </div>
+
+      <div class="showButton">
+        
+          
+          <h4><a href="/creategrocery">Add New Grocery Item</a></h4>
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+* {
+    width: 0 auto; 
+    margin: 0 auto;
+    
+}
+
+
+
+a {
+    background-color: tomato;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 5px;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  
+  a:hover {
+    background-color: #555;
+  }
+  
+  a:active {
+    background-color: black;
+  }
+
+
+  body {
+      
+    background-image: url("./background.jpeg");
+    background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+
+
+  img {
+      
+    border: 1px solid rgb(10, 1, 1);
+    border-radius: 10px;
+    padding: 5px;
+    width: 500px;
+  }
+
+
+
+  .showbodylist {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+  .maincontent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      min-height: 100vh;
+  }
+
+  .head {
+    justify-content: space-around;
+    text-align:center;
+    font-size: larger;
+    color: rgb(194, 32, 32);
+    background-color: grey;
+    border-radius: 15px;
+    
+  }
+
+ 
+
+  .subHead, .additems {
+    text-align:center;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .list {
+      display: inline;
+  }
+
+  .listelement {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    width: 300px;
+  }
+
+    .backgroundcolor {
+        background-color: white;
+        width: 280px;
+
+    }
+  .showname {
+      font-size:xx-large;
+      background-color: white;
+  }
+
+.listwhole {
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    padding-top: 20px;
+}
+
+  .additems {
+      margin-top: 300px;
+      width: 600px;
+    
+  }
+  .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .addButton h4 a {
+      color: rgb(8, 8, 8);
+      background-color:tomato;
+    padding: 20px;
+    font-family:  Helvetica;
+      margin-bottom: 8px;
+      border-radius: 10px;
+    text-align: center;
+  }
+
+  .showButton {
+    text-align: center;
+      padding: 20px;
+  }
+  .addlist {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: Helvetica;
+    color: rgb(7, 4, 172);
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgb(202, 202, 202);
+  }
+
+  tbody {
+    text-align: center;
+  }

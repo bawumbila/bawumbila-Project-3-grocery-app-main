@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title><%= title %></title>
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 8px;
+      text-align: center;
+      padding-bottom: 30px;
+      padding-top: 30px;
+      background-color: #434161;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <!-- <img src="/stylesheets/icon.png"> -->
+    <a href="/show" <%- title === 'Add Movie' ? 'All Grocery List' : '' %>>ALL GROCERY LISTS</a>
+    <a href="/new" <%- title === 'New Grocery List' ? 'class="active"' : '' %>>CREATE GROCERY LISTS</a>
+    <a href="/creategrocery" <%- title === 'Add Grocery' ? 'class="active"' : '' %>>ADD GROCERY ITEM</a>
+    <a href="/" <%- title === 'Add Grocery' ? 'class="active"' : '' %>>HOME</a>
+  </nav>
+  <main>
+    <!-- <h1><%= title %></h1> -->

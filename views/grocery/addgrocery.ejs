@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ 
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <div class="additems">
+
+  <h1>Add New grocery Items</h1>
+  <p>Please first ensure that the Grocery is not in the dropdown
+    <select>
+        <% groceries.forEach(function(p) { %>
+          <option><%= p.name %></option>
+        <% }) %>
+      </select>
+</p>
+  <div>
+      
+      <form id="add-grocery-form" action="/addgrocery" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name">
+        <label>Price:</label>
+        <input type="text" name="price">
+        
+        <!-- done: <input type="checkbox" name="done" /><br /> -->
+        <input type="submit" name="" value="Create Grocery Item" />
+       </form>
+      
+    </div>
+  </div>
+</body>
+
+</html>

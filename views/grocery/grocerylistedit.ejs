@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+ 
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+
+    <div class="additems">
+
+  <h1>Edit List </h1>
+  
+
+  <article>
+      
+      <form id="add-grocery-form" action="/<%=groceryList._id %>/grocerylistedit?_method=PUT" method="POST">
+        <label>Name:</label>
+
+        <input type="text" name="name" value="<%= groceryList.name %>">
+      
+       
+        <input type="submit" name="" value="Update Grocery List" />
+       </form>
+      
+    </article>
+  </div>
+</body>
+
+</html>
